@@ -1,4 +1,4 @@
-package main
+package sortFile
 
 import (
 	"path/filepath"

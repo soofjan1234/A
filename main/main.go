@@ -2,20 +2,21 @@ package main
 
 import (
 	"fmt"
+	"github.com/soofjan1234/sortFile"
 	"sort"
 )
 
 func SortFilesByName(fileNames []string) {
 	sort.Slice(fileNames, func(i, j int) bool {
-		return CompareFileNames(fileNames[i], fileNames[j])
+		return sortFile.CompareFileNames(fileNames[i], fileNames[j])
 	})
 }
 
 func SortFilesByNameExtension(fileNames []string) {
 	sort.Slice(fileNames, func(i, j int) bool {
-		ext1 := GetFileExtension(fileNames[i])
-		ext2 := GetFileExtension(fileNames[j])
-		return CompareFileNames(ext1, ext2)
+		ext1 := sortFile.GetFileExtension(fileNames[i])
+		ext2 := sortFile.GetFileExtension(fileNames[j])
+		return sortFile.CompareFileNames(ext1, ext2)
 	})
 }
 
