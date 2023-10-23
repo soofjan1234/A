@@ -1,5 +1,5 @@
-# SortFile
-SortFile is a method that sorts file by filename or file extension.
+# sortFile
+sortFile is a method that sorts files by filename or file extension.
 
 ## Usage
 ```txt
