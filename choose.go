@@ -1,6 +1,6 @@
 package sortFile
 
-func chooseAndSortDirMethod(sort string, ascend bool, dirs []Dir) {
+func ChooseAndSortDirMethod(sort string, ascend bool, dirs []Dir) {
 	if sort == FileName {
 		if ascend {
 			SortByDirName(dirs)
@@ -10,7 +10,7 @@ func chooseAndSortDirMethod(sort string, ascend bool, dirs []Dir) {
 	}
 }
 
-func chooseAndSortFileMethod(sort string, ascend bool, files []File) {
+func ChooseAndSortFileMethod(sort string, ascend bool, files []File) {
 	if sort == UpdateTime {
 		if ascend {
 			SortByUpdatedTime(files)
