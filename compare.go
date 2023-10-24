@@ -4,6 +4,7 @@ import (
 	"path/filepath"
 	"strconv"
 	"strings"
+	"time"
 )
 
 func CompareFileNames(a, b string) bool {
@@ -50,6 +51,14 @@ func CompareFileNames(a, b string) bool {
 
 	// 如果一个文件名是另一个文件名的前缀，则较短的文件名较小
 	return len(a) < len(b)
+}
+
+func CompareFileUpdatedTime(a, b time.Time) bool {
+	return a.After(b)
+}
+
+func CompareFileSize(a, b int64) bool {
+	return a < b
 }
 
 func isDigit(ch byte) bool {
